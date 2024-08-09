@@ -1,0 +1,320 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="description" content="nakomar , un super beau site"><title>nakomar</title></head><body class="bg-gray-100 text-gray-800 font-sans">
+  <header class="bg-white shadow-md">
+    <nav class="container mx-auto py-4 flex justify-between items-center"><a href="1" data-page-id="667e7fffb0717faeb3c5e62c" id="page-link" class="text-gray-700 hover:text-blue-500">Page 1</a>
+      <a href="#" class="text-2xl font-bold text-gray-800 flex items-center">
+        <i class="fa-solid fa-leaf mr-2 text-green-500"></i>
+        Nakomar.fr baby!!
+      </a>
+      <div class="flex space-x-6">
+        <a href="#about" class="hover:text-green-500 transition-colors duration-300">About</a>
+        <a href="#services" class="hover:text-green-500 transition-colors duration-300">Services</a>
+        <a href="#portfolio" class="hover:text-green-500 transition-colors duration-300">Portfolio</a>
+        <a href="#contact" class="hover:text-green-500 transition-colors duration-300">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-blue-500 text-white py-20">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <div class="md:w-1/2 space-y-6">
+      <h1 class="text-4xl font-bold">Welcome to <span class="text-gray-200">Nakomar.fr</span></h1>
+      <p class="text-lg">Discover our sustainable solutions for a greener future.</p>
+      <a href="#" class="bg-gray-200 text-blue-500 px-6 py-3 rounded-full hover:bg-gray-300 transition-colors duration-300">Learn More</a>
+    </div>
+    <div class="md:w-1/2 mt-8 md:mt-0">
+      <img src="https://images.unsplash.com/photo-1584539329415-06b272151e73?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHwyMXx8T0t8ZW58MHwwfHx8MTcxOTU2NjM2NXww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" style="max-width: 100%;">
+    </div>
+  </div>
+  <div class="container mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-white text-blue-500 p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-4">Card 1</h2>
+      <p class="text-gray-700 card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="bg-white text-blue-500 p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-4">Card 2</h2>
+      <p class="text-gray-700 card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+  <script>
+    function animateText() {
+      const cardTexts = document.querySelectorAll('.card-text');
+      cardTexts.forEach(cardText => {
+        const words = cardText.textContent.split(' ');
+        cardText.innerHTML = words.map(word => `<span class="word">${word}</span>`).join(' ');
+        const wordSpans = cardText.querySelectorAll('.word');
+        let index = 0;
+        setInterval(() => {
+          wordSpans.forEach(span => span.style.transform = 'translateY(0)');
+          wordSpans[index].style.transform = 'translateY(-10px)';
+          index = (index + 1) % wordSpans.length;
+        }, 100);
+      });
+    }
+    animateText();
+  </script>
+  <style>
+    .word {
+      display: inline-block;
+      transition: transform 0.2s ease-in-out;
+    }
+  </style>
+</section>
+
+    <section id="about" class="py-16">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold mb-8">About Us</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <img src="https://images.unsplash.com/photo-1613755052450-3a5e2ed11b2d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHwyMnx8T0t8ZW58MHwwfHx8MTcxOTU2NjM2NXww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" style="max-width: 100%;">
+      </div>
+      <div class="space-y-6">
+        <p id="animatedText1">At Nakomar.fr, we are dedicated to providing sustainable solutions that help create a greener future. Our team of experts works tirelessly to develop innovative products and services that are environmentally friendly and economically viable.</p>
+        <p id="animatedText2">With a focus on renewable energy, eco-friendly materials, and sustainable practices, we strive to make a positive impact on the world around us. Join us on this journey as we work towards a more sustainable tomorrow.</p>
+        <a href="#" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition-colors duration-300">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    function animateText(elementId) {
+      const element = document.getElementById(elementId);
+      const text = element.innerText;
+      element.innerHTML = '';
+      const words = text.split(' ');
+      words.forEach((word, index) => {
+        const span = document.createElement('span');
+        span.innerText = word + ' ';
+        span.style.display = 'inline-block';
+        span.style.transition = 'transform 0.3s ease, color 0.5s ease';
+        element.appendChild(span);
+        setInterval(() => {
+          span.style.transform = `translateY(${Math.sin((Date.now() + index * 100) / 300) * 10}px)`;
+          span.style.color = Math.sin((Date.now() + index * 100) / 500) > 0 ? 'blue' : 'yellow';
+        }, 50);
+      });
+    }
+    animateText('animatedText1');
+    animateText('animatedText2');
+  </script>
+</section>
+
+    <section id="services" class="bg-gray-100 py-16">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
+    <i class="fa-solid fa-leaf text-green-500 text-4xl mb-4"></i>
+    <h3 class="text-2xl font-bold mb-2">Renewable Energy</h3>
+    <p class="color-changing-text">Discover our cutting-edge renewable energy solutions, designed to power your home or business in an eco-friendly way.</p>
+  </div>
+  <div class="bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
+    <i class="fa-solid fa-recycle text-green-500 text-4xl mb-4"></i>
+    <h3 class="text-2xl font-bold mb-2">Recycling Services</h3>
+    <p class="color-changing-text">Reduce your environmental impact with our comprehensive recycling services, tailored to your needs.</p>
+  </div>
+  <div class="bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform duration-300">
+    <i class="fa-solid fa-tree text-green-500 text-4xl mb-4"></i>
+    <h3 class="text-2xl font-bold mb-2">Eco-Friendly Products</h3>
+    <p class="color-changing-text">Explore our selection of sustainable products that are designed to be kind to the planet and your wallet.</p>
+  </div>
+  <script>
+    function changeTextColor() {
+      const texts = document.querySelectorAll('.color-changing-text');
+      let isBlue = true;
+      
+      setInterval(() => {
+        texts.forEach(text => {
+          text.style.color = isBlue ? 'blue' : 'yellow';
+        });
+        isBlue = !isBlue;
+      }, 2000);
+    }
+    
+    changeTextColor();
+  </script>
+</div>
+  </div>
+  <script>
+    document.querySelectorAll('#services p').forEach(paragraph => {
+      const text = paragraph.innerText;
+      paragraph.innerHTML = '';
+      text.split('').forEach((letter, index) => {
+        const span = document.createElement('span');
+        span.innerText = letter;
+        span.style.display = 'inline-block';
+        span.style.transition = 'transform 0.3s';
+        paragraph.appendChild(span);
+      });
+
+      setInterval(() => {
+        paragraph.querySelectorAll('span').forEach((span, index) => {
+          setTimeout(() => {
+            span.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+              span.style.transform = 'translateY(0)';
+            }, 300);
+          }, index * 100);
+        });
+      }, 2000);
+    });
+  </script>
+</section>
+
+    <section id="portfolio" class="py-16">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold mb-8">Our Portfolio</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x300" alt="Portfolio Image 1" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2">Project 1</h3>
+          <p class="jumping-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x300" alt="Portfolio Image 2" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2">Project 2</h3>
+          <p class="jumping-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x300" alt="Portfolio Image 3" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2">Project 3</h3>
+          <p class="jumping-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.jumping-text').forEach(paragraph => {
+      const text = paragraph.textContent;
+      paragraph.textContent = '';
+      for (let i = 0; i < text.length; i++) {
+        const span = document.createElement('span');
+        span.textContent = text[i];
+        span.style.display = 'inline-block';
+        paragraph.appendChild(span);
+      }
+    });
+
+    function animateLetters() {
+      document.querySelectorAll('.jumping-text span').forEach((span, index) => {
+        setTimeout(() => {
+          span.animate([
+            { transform: 'translateY(0)' },
+            { transform: 'translateY(-10px)' },
+            { transform: 'translateY(0)' }
+          ], {
+            duration: 300,
+            easing: 'ease-in-out'
+          });
+        }, index * 50);
+      });
+    }
+
+    setInterval(animateLetters, 3000);
+  </script>
+</section>
+
+    <section id="contact" class="bg-blue-500 text-white py-16">
+  <div class="container mx-auto flex justify-between items-start">
+    <div class="w-1/4 bg-white text-blue-500 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-4">Left Card</h3>
+      <p class="text-gray-700 animate-text">This is the left card with a paragraph. It provides additional information or context for the contact form.</p>
+    </div>
+    <div class="w-1/2">
+      <h2 class="text-3xl font-bold mb-8 text-center">Contact Us</h2>
+      <form class="max-w-md mx-auto space-y-6">
+        <div>
+          <label for="name" class="block mb-2 font-bold">Name</label>
+          <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required="">
+        </div>
+        <div>
+          <label for="email" class="block mb-2 font-bold">Email</label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required="">
+        </div>
+        <div>
+          <label for="message" class="block mb-2 font-bold">Message</label>
+          <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required=""></textarea>
+        </div>
+        <button type="submit" class="bg-gray-200 text-blue-500 px-6 py-3 rounded-full hover:bg-gray-300 transition-colors duration-300">Send Message</button>
+      </form>
+    </div>
+    <div class="w-1/4 bg-white text-blue-500 p-6 rounded-lg shadow-lg">
+  <h3 class="text-xl font-bold mb-4">Right Card</h3>
+  <p class="text-gray-700 animate-text" id="colorChangingText">This is the right card with a paragraph. It can contain contact details or any other relevant information.</p>
+  <script>
+    const text = document.getElementById('colorChangingText');
+    let isBlue = true;
+    
+    function changeColor() {
+      if (isBlue) {
+        text.style.color = 'yellow';
+      } else {
+        text.style.color = 'blue';
+      }
+      isBlue = !isBlue;
+    }
+    
+    setInterval(changeColor, 1000);
+  </script>
+</div>
+  </div>
+  <script>
+    function animateText() {
+      const animatedTexts = document.querySelectorAll('.animate-text');
+      animatedTexts.forEach(text => {
+        const words = text.textContent.split(' ');
+        text.textContent = '';
+        words.forEach((word, index) => {
+          const span = document.createElement('span');
+          span.textContent = word + ' ';
+          span.style.display = 'inline-block';
+          span.style.animation = `jumpWave 1s ease-in-out ${index * 0.1}s infinite`;
+          text.appendChild(span);
+        });
+      });
+    }
+
+    animateText();
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes jumpWave {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto flex justify-between items-center">
+      <p>© 2023 Nakomar.fr. All rights reserved.</p>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-green-500 transition-colors duration-300">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" class="hover:text-green-500 transition-colors duration-300">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#" class="hover:text-green-500 transition-colors duration-300">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="hover:text-green-500 transition-colors duration-300">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+<div style="position: absolute; pointer-events: none; background-color: rgb(206, 229, 237); opacity: 0.6; border-radius: 50px; display: none; z-index: 11;"><div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; color: green;">+</div></div> </body></html>
